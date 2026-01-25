@@ -48,7 +48,11 @@ export async function registerRoutes(
 
             // Generate Image
             try {
-              const prompt = `Comic book style. ${panelDesc}. Characters: ${charDescription}. detailed, vibrant colors, clean lines.`;
+              const stylePrompt = story.style === "Classic Marvel" ? "vibrant comic book art style, classic marvel aesthetic, dynamic lighting" :
+                                 story.style === "Manga" ? "japanese manga style, black and white screentone, sharp lines" :
+                                 "noir sketch style, high contrast, gritty pencil drawings, moody shadows";
+              
+              const prompt = `${stylePrompt}. ${panelDesc}. Characters: ${charDescription}. detailed, clean lines.`;
               // Use the integration's generateImage function (uses gemini-2.5-flash-image)
               const base64Image = await generateImage(prompt);
               
@@ -121,7 +125,12 @@ export async function registerRoutes(
 
     try {
       await storage.updatePanelStatus(panelId, 'generating');
-      const prompt = `Comic book style. ${panel.description}. Characters: ${charDescription}. detailed, vibrant colors, clean lines.`;
+      
+      const stylePrompt = story.style === "Classic Marvel" ? "vibrant comic book art style, classic marvel aesthetic, dynamic lighting" :
+                         story.style === "Manga" ? "japanese manga style, black and white screentone, sharp lines" :
+                         "noir sketch style, high contrast, gritty pencil drawings, moody shadows";
+
+      const prompt = `${stylePrompt}. ${panel.description}. Characters: ${charDescription}. detailed, clean lines.`;
       const base64Image = await generateImage(prompt);
       const updated = await storage.updatePanelImage(panelId, base64Image);
       res.json(updated);

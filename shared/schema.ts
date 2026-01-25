@@ -9,6 +9,8 @@ export const stories = pgTable("stories", {
   id: serial("id").primaryKey(),
   title: text("title").notNull().default("Untitled Story"),
   script: text("script").notNull(), // The original text input
+  layoutTemplate: text("layout_template").notNull().default("3-panel"), // 3-panel, 6-panel
+  style: text("style").notNull().default("Classic Marvel"), // Classic Marvel, Manga, Noir Sketch
   createdAt: timestamp("created_at").defaultNow(),
 });
 
