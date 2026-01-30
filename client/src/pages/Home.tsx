@@ -71,7 +71,7 @@ export default function Home() {
         backgroundRepeat: 'repeat',
       }}
     >
-      <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px] z-0" />
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-0" />
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
