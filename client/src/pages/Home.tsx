@@ -86,7 +86,7 @@ export default function Home() {
           >
             Comic Gen
           </motion.h1>
-          <p className="text-3xl font-hand text-secondary font-bold drop-shadow-sm rotate-[1deg]">
+          <p className="text-3xl font-hand text-secondary font-bold drop-shadow-sm rotate-[1deg] bg-white/30 backdrop-blur-[2px] px-4 py-1 rounded-lg inline-block">
             Visual Masterpieces from Your Words!
           </p>
         </div>
