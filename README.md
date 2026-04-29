@@ -26,7 +26,7 @@ Main Functionalities:
 ## Installation & Usage
 This app is not in its final state, and is used for learning and showcase purposes. To see the preview and use the app (on Replit), please refer to the link in the "About me" section of the repository on Github, or the link below as well.
 
-https://replit.com/@salvatore-dev/Comic-Story-Builder
+https://17892ba7-281a-4904-9253-7a3d4bd6ee1a-00-1o5yacainllyh.picard.replit.dev/
 
 ## Notes
 A learning project practicing React + TypeScript frontend (Vite, Tailwind CSS) with a Node.js backend.
